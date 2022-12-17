@@ -18,3 +18,18 @@ source "$DOTZSH/env.zsh"
 
 # Customize to your needs...
 
+export PYTHONPATH='/usr/local/lib/python3.10/site-packages/pdm/pep582':$PYTHONPATH
+export PATH="/Users/rla2/.rd/bin:$PATH"
+export EDITOR="/usr/bin/nano"
+export VISUAL="/usr/bin/nano"
+export TERM="xterm-256color"
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ${HOME}/Dropbox/tools/history-search-multi-word/history-search-multi-word.plugin.zsh
+source ${HOME}/Dropbox/tools/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
+
+source "$HOME/.dotfiles/docker/aliases.zsh"
+source "$HOME/.dotfiles/docker/functions/co"
+
