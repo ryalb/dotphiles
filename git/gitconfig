@@ -12,10 +12,11 @@
     #name = "**Your Name**"
     #email = "**Your Email**"
     #signingkey = **Your GPG ID**
-
-[branch "master"]
+	name = Ryan Leite Albuquerque
+	email = ryan@cesar.org.br
+[branch "main"]
     remote = origin
-    merge = refs/heads/master
+    merge = refs/heads/main
 
 [color]
     branch = always
@@ -146,3 +147,17 @@
 [url "git@github.com:"]
     insteadof = github:
 
+[core]
+	editor = /usr/bin/nano
+	excludesfile = /Users/rla2/.gitignore_global
+
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path =
+
+[mergetool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+
+[init]
+	defaultBranch = main

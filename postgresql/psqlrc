@@ -73,3 +73,7 @@
 \set sp 'SHOW search_path;'
 \set clear '\\! clear;'
 \set ll '\\! ls -lrt;'
+
+\setenv PAGER pspg
+\pset border 2
+\pset linestyle unicode

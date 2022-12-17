@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #
 # dotphiles : https://github.com/dotphiles/dotphiles
 #
@@ -94,14 +101,14 @@ zstyle ':dotzsh:module:ssh:agent' forwarding 'yes'
 #zstyle ':dotzsh:module:tmux:aliases' tmuxinator 'yes'
 
 ### Syntax Highlighting module
-#zstyle ':dotzsh:module:syntax-highlighting' highlighters 'main' 'brackets' 'pattern' \
-#  'cursor' 'root' \
+zstyle ':dotzsh:module:syntax-highlighting' highlighters 'main' 'brackets' 'pattern' 'cursor' 'root' \
 
 ### Theme module
 # Set default theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':dotzsh:module:theme' theme 'dotphiles'
+# zstyle ':dotzsh:module:theme' theme 'minimal'
 ### Set custom theme based on hostname or domain
 # zstyle ':dotzsh:module:theme:hostname:your-host-here' theme 'dotphiles' 'soldark' 'magenta'
 # zstyle ':dotzsh:module:theme:hostname:your-other-host-here' theme 'dotphiles' 'soldark' 'violet'
@@ -112,3 +119,7 @@ source "$DOTZSH/init.zsh"
 
 ### Customize to your needs...
 
+source ~/.dotfiles/zsh/dotzsh/modules/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.dotfiles/zsh/dotzsh/modules/powerlevel10k/.p10k.zsh ]] || source ~/.dotfiles/zsh/dotzsh/modules/powerlevel10k/.p10k.zsh
