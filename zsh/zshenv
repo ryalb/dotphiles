@@ -18,6 +18,8 @@ source "$DOTZSH/env.zsh"
 
 # Customize to your needs...
 
+alias ll="exa -lagh --git --group-directories-first"
+
 export PYTHONPATH='/usr/local/lib/python3.10/site-packages/pdm/pep582':$PYTHONPATH
 export PATH="/Users/rla2/.rd/bin:$PATH"
 export EDITOR="/usr/bin/nano"
